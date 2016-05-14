@@ -3,7 +3,8 @@
     namespace Lu1sSuarez;
     
     use Lu1sSuarez\Exceptions\SDKException;
-    
+    use Lu1sSuarez\SDK\Facebook;
+
     /**
      * Class Social
      *
@@ -19,6 +20,16 @@
          * @var array List of permitted SDK
          */
         protected $sdk;
+
+        /**
+         * @var string Selected SDK
+         */
+        public $sdk_current;
+    
+        /**
+         * @var array Config SDK interface
+         */
+        public $config;
         
         /**
          * Social constructor.
@@ -29,11 +40,14 @@
          * @throws SDKException
          */
         public function __construct($sdk, array $config) {
-            $this->sdk = ['facebook'];
+            $this->sdk         = ['facebook'];
+            $this->sdk_current = $sdk;
             
-            if (!$this->sdk[$sdk]) {
-                throw new SDKException('The chosen sdk is currently not available, if you want to collaborate in the incorporation of ' . $sdk . ' we invite you to join our partnership. Available SDKs ' . implode(",", $this->sdk) . '.');
+            if (!$this->sdk[$this->sdk_current]) {
+                throw new SDKException('The chosen sdk is currently not available, if you want to collaborate in the incorporation of ' . $this->sdk_current . ' we invite you to join our partnership. Available SDKs ' . implode(",", $this->sdk) . '.');
             }
+            
+            $this->config = (new $this->sdk_current)->check_config($config);
             
         }
         
