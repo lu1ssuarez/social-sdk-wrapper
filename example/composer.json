@@ -1,0 +1,17 @@
+{
+    "name": "lu1ssuarez/social-sdk-wrapper-example",
+    "description": "Social SDK Wrapper Example",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luis Enrique Suárez",
+            "email": "luissuarezdev@gmail.com",
+            "homepage": "https://lu1ssuarez.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "lu1ssuarez/social-sdk-wrapper": "dev-master"
+    },
+    "minimum-stability": "dev"
+}
