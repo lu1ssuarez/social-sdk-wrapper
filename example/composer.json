@@ -11,7 +11,13 @@
         }
     ],
     "require": {
-        "lu1ssuarez/social-sdk-wrapper": "dev-master"
+        "lu1ssuarez/social-sdk-wrapper": "dev-master",
+        "maximebf/debugbar": "^1.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lu1sSuarez\\": "../src/Lu1sSuarez/"
+        }
     },
     "minimum-stability": "dev"
 }
