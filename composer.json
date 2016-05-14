@@ -1,0 +1,27 @@
+{
+    "name": "lu1ssuarez/social-sdk-wrapper",
+    "type": "library",
+    "description": "Facebook SDK, Twitter API, Instagram Api",
+    "keywords": [
+        "facebook",
+        "twitter",
+        "instagram",
+        "api",
+        "wrapper",
+        "sdk",
+        "laravel"
+    ],
+    "homepage": "https://lu1ssuarez.com/git/social-sdk-wrapper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luis Enrique Suárez",
+            "email": "luissuarezdev@gmail.com",
+            "homepage": "https://lu1ssuarez.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    }
+}
