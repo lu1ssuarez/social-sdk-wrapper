@@ -1,7 +1,7 @@
 {
     "name": "lu1ssuarez/social-sdk-wrapper",
     "type": "library",
-    "description": "Facebook SDK, Twitter API, Instagram Api",
+    "description": "Facebook SDK, Twitter API, Instagram Api wrapper for PHP",
     "keywords": [
         "facebook",
         "twitter",
@@ -22,6 +22,12 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9"
+        "php": ">=5.5.9",
+        "facebook/php-sdk-v4": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lu1sSuarez\\": "src/Lu1sSuarez/"
+        }
     }
 }
